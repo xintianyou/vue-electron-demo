@@ -17,7 +17,7 @@ const createWindow = () => {
   // console.log(process.env.NODE_ENV)
   if (process.env.NODE_ENV === 'development') {
     win.webContents.openDevTools()
-    win.loadURL('http://192.168.20.40:8081')
+    win.loadURL('http://localhost:8090')
   } else {
     win.loadFile('./dist/index.html')
   }
