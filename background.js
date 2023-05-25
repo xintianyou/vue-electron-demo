@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, nativeTheme } = require('electron')
+const { app, BrowserWindow, screen, ipcMain, nativeTheme } = require('electron')
 const path = require('path')
 
 // 热加载
@@ -8,15 +8,19 @@ try {
 
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: screen.getPrimaryDisplay().workAreaSize.width, 
+    height: screen.getPrimaryDisplay().workAreaSize.height, 
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
   })
-  win.webContents.openDevTools()
-  win.loadFile('./dist/index.html')
-  win.loadURL('http://192.168.20.40:8081')
+  // console.log(process.env.NODE_ENV)
+  if (process.env.NODE_ENV === 'development') {
+    win.webContents.openDevTools()
+    win.loadURL('http://192.168.20.40:8081')
+  } else {
+    win.loadFile('./dist/index.html')
+  }
 }
 
 ipcMain.handle('dark-mode:toggle', () => {
