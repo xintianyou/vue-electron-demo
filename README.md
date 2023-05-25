@@ -1,5 +1,5 @@
 # vue-electron-demo
-## electron套壳vue项目
+## electron套壳vue项目demo
 
 ### 安装依赖
 ```
