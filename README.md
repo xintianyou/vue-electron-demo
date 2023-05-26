@@ -17,6 +17,8 @@ npm run serve
 npm run start
 ```
 
+<img src=./public/WX20230526-172101@2x.png>
+
 ### 编译打包vue代码为原生html,css,js
 ```
 npm run build
