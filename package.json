@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "start": "cross-env NODE_ENV=development electron .",
+    "start": "cross-env NODE_ENV=development electron . --no-sandbox",
     "package": "electron-forge package",
     "make": "cross-env NODE_ENV=production ELECTRON_MIRROR=https://cdn.npm.taobao.org/dist/electron/ electron-forge make"
   },
