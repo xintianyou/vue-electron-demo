@@ -19,7 +19,7 @@ const createWindow = () => {
     win.webContents.openDevTools()
     win.loadURL('http://localhost:8090')
   } else {
-    win.loadFile('./dist/index.html')
+    win.loadFile('./index.html')
   }
 }
 
