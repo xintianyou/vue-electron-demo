@@ -31,3 +31,7 @@ npm run build
 npm run make
 ```
 
+### ❤️ Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/xintianyou/vue-electron-demo.svg)](https://starchart.cc/xintianyou/vue-electron-demo)
+
